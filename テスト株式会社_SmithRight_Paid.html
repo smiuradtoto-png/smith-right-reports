@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>テスト株式会社 | Smith Right 海外広告診断書 $30</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --gold: #C9A84C;
+    --gold-light: #E8C97A;
+    --gold-pale: #F5E9C8;
+    --dark: #0D0D0D;
+    --dark2: #1A1A1A;
+    --dark3: #242424;
+    --mid: #3A3A3A;
+    --text: #E8E4DC;
+    --text-dim: #9A9490;
+    --accent: #4C7EC9;
+    --accent2: #C94C6A;
+    --green: #4CC97A;
+    --border: rgba(201,168,76,0.2);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--dark);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    line-height: 1.7;
+    font-size: 16px;
+  }
+
+  /* ── HEADER ── */
+  .header {
+    background: linear-gradient(135deg, var(--dark2) 0%, #0A0A0A 100%);
+    border-bottom: 1px solid var(--border);
+    padding: 60px 40px 50px;
+    position: relative;
+    overflow: hidden;
+  }
+  .header::before {
+    content: '';
+    position: absolute;
+    top: -80px; right: -80px;
+    width: 400px; height: 400px;
+    background: radial-gradient(circle, rgba(201,168,76,0.08) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .header-inner {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(201,168,76,0.12);
+    border: 1px solid var(--border);
+    color: var(--gold);
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    padding: 6px 14px;
+    border-radius: 2px;
+    margin-bottom: 28px;
+    text-transform: uppercase;
+  }
+  .badge::before { content: '◆'; font-size: 8px; }
+  .company-name {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(32px, 5vw, 54px);
+    font-weight: 900;
+    color: #fff;
+    line-height: 1.1;
+    margin-bottom: 12px;
+    letter-spacing: -0.02em;
+  }
+  .company-name span { color: var(--gold); }
+  .subtitle {
+    font-size: 15px;
+    color: var(--text-dim);
+    font-weight: 300;
+    letter-spacing: 0.02em;
+    margin-bottom: 36px;
+  }
+  .meta-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 16px;
+  }
+  .meta-item {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid var(--border);
+    padding: 14px 18px;
+    border-radius: 4px;
+  }
+  .meta-label {
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    margin-bottom: 4px;
+    font-family: 'DM Mono', monospace;
+  }
+  .meta-value {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text);
+  }
+
+  /* ── SCORE HERO ── */
+  .score-hero {
+    background: var(--dark2);
+    border-bottom: 1px solid var(--border);
+    padding: 60px 40px;
+  }
+  .score-hero-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 60px;
+    align-items: center;
+  }
+  .score-circle {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 3px solid var(--gold);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle at center, rgba(201,168,76,0.08) 0%, transparent 70%);
+    flex-shrink: 0;
+    position: relative;
+  }
+  .score-circle::before {
+    content: '';
+    position: absolute;
+    inset: 6px;
+    border-radius: 50%;
+    border: 1px solid rgba(201,168,76,0.2);
+  }
+  .score-number {
+    font-family: 'Playfair Display', serif;
+    font-size: 52px;
+    font-weight: 900;
+    color: var(--gold);
+    line-height: 1;
+  }
+  .score-label {
+    font-size: 11px;
+    color: var(--text-dim);
+    letter-spacing: 0.1em;
+    font-family: 'DM Mono', monospace;
+    text-transform: uppercase;
+  }
+  .score-details h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: #fff;
+  }
+  .score-details p {
+    color: var(--text-dim);
+    font-size: 15px;
+    margin-bottom: 24px;
+    line-height: 1.8;
+  }
+  .score-bars {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .score-bar-row {
+    display: grid;
+    grid-template-columns: 120px 1fr 36px;
+    gap: 12px;
+    align-items: center;
+  }
+  .score-bar-label {
+    font-size: 12px;
+    color: var(--text-dim);
+    font-family: 'DM Mono', monospace;
+    white-space: nowrap;
+  }
+  .score-bar-track {
+    height: 4px;
+    background: rgba(255,255,255,0.06);
+    border-radius: 2px;
+    overflow: hidden;
+  }
+  .score-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--gold) 0%, var(--gold-light) 100%);
+    border-radius: 2px;
+    transition: width 1s ease;
+  }
+  .score-bar-val {
+    font-size: 12px;
+    color: var(--gold);
+    font-family: 'DM Mono', monospace;
+    text-align: right;
+  }
+
+  /* ── MAIN ── */
+  .main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 60px 40px;
+  }
+
+  /* ── SECTION ── */
+  .section {
+    margin-bottom: 56px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    overflow: hidden;
+    background: var(--dark2);
+  }
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 22px 28px;
+    border-bottom: 1px solid var(--border);
+    background: rgba(201,168,76,0.04);
+  }
+  .section-letter {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: 900;
+    color: var(--gold);
+    line-height: 1;
+    min-width: 32px;
+  }
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+  }
+  .section-score-badge {
+    margin-left: auto;
+    background: rgba(201,168,76,0.12);
+    border: 1px solid var(--border);
+    color: var(--gold);
+    font-family: 'DM Mono', monospace;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 4px 12px;
+    border-radius: 2px;
+    white-space: nowrap;
+  }
+  .section-body {
+    padding: 28px;
+  }
+  .section-body p {
+    color: var(--text-dim);
+    font-size: 15px;
+    line-height: 1.85;
+    margin-bottom: 16px;
+  }
+  .section-body p:last-child { margin-bottom: 0; }
+
+  /* ── CALLOUT BOXES ── */
+  .callout {
+    border-left: 3px solid var(--gold);
+    background: rgba(201,168,76,0.05);
+    padding: 16px 20px;
+    border-radius: 0 4px 4px 0;
+    margin: 20px 0;
+  }
+  .callout-label {
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-family: 'DM Mono', monospace;
+    margin-bottom: 6px;
+  }
+  .callout p {
+    color: var(--text) !important;
+    font-size: 14px !important;
+    margin: 0 !important;
+  }
+
+  .callout.positive { border-color: var(--green); background: rgba(76,201,122,0.05); }
+  .callout.positive .callout-label { color: var(--green); }
+  .callout.warning { border-color: #C9944C; background: rgba(201,148,76,0.05); }
+  .callout.warning .callout-label { color: #C9944C; }
+  .callout.danger { border-color: var(--accent2); background: rgba(201,76,106,0.05); }
+  .callout.danger .callout-label { color: var(--accent2); }
+
+  /* ── LIST ── */
+  .check-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 16px 0;
+  }
+  .check-list li {
+    display: flex;
+    gap: 12px;
+    font-size: 14px;
+    color: var(--text-dim);
+    line-height: 1.6;
+  }
+  .check-list li::before {
+    content: '→';
+    color: var(--gold);
+    font-family: 'DM Mono', monospace;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+  .check-list.green li::before { content: '✓'; color: var(--green); }
+  .check-list.red li::before { content: '✕'; color: var(--accent2); }
+
+  /* ── TABLE ── */
+  .data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    margin: 16px 0;
+  }
+  .data-table th {
+    text-align: left;
+    padding: 10px 14px;
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    border-bottom: 1px solid var(--border);
+    font-weight: 400;
+  }
+  .data-table td {
+    padding: 12px 14px;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+    color: var(--text-dim);
+    vertical-align: top;
+  }
+  .data-table td:first-child { color: var(--text); font-weight: 500; }
+  .data-table tr:last-child td { border-bottom: none; }
+
+  /* ── 90-DAY PLAN ── */
+  .plan-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin: 20px 0;
+  }
+  .plan-phase {
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 20px;
+    background: rgba(255,255,255,0.02);
+  }
+  .plan-phase-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 8px;
+  }
+  .plan-phase h4 {
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 12px;
+  }
+  .plan-phase ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .plan-phase ul li {
+    font-size: 13px;
+    color: var(--text-dim);
+    display: flex;
+    gap: 8px;
+  }
+  .plan-phase ul li::before { content: '·'; color: var(--gold); }
+
+  /* ── SCORE SUMMARY ── */
+  .summary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 12px;
+    margin: 20px 0;
+  }
+  .summary-item {
+    background: rgba(255,255,255,0.02);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 16px;
+    text-align: center;
+  }
+  .summary-item-score {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--gold);
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+  .summary-item-label {
+    font-size: 11px;
+    color: var(--text-dim);
+    font-family: 'DM Mono', monospace;
+    letter-spacing: 0.05em;
+  }
+
+  /* ── CTA ── */
+  .cta-block {
+    background: linear-gradient(135deg, rgba(201,168,76,0.08) 0%, rgba(201,168,76,0.02) 100%);
+    border: 1px solid var(--gold);
+    border-radius: 6px;
+    padding: 40px;
+    text-align: center;
+    margin-top: 60px;
+  }
+  .cta-block h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 12px;
+  }
+  .cta-block p {
+    color: var(--text-dim);
+    font-size: 15px;
+    margin-bottom: 28px;
+  }
+  .cta-btn {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--dark);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    padding: 14px 36px;
+    border-radius: 2px;
+    text-decoration: none;
+    letter-spacing: 0.04em;
+    transition: background 0.2s;
+  }
+  .cta-btn:hover { background: var(--gold-light); }
+
+  /* ── DIVIDER ── */
+  .divider {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 40px 0;
+    color: var(--text-dim);
+    font-size: 11px;
+    font-family: 'DM Mono', monospace;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  .divider::before, .divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    border-top: 1px solid var(--border);
+    padding: 40px;
+    text-align: center;
+    color: var(--text-dim);
+    font-size: 13px;
+    line-height: 2;
+  }
+  .footer strong { color: var(--gold); }
+
+  @media (max-width: 700px) {
+    .header { padding: 40px 20px 36px; }
+    .score-hero { padding: 40px 20px; }
+    .score-hero-inner { grid-template-columns: 1fr; gap: 32px; }
+    .score-circle { margin: 0 auto; }
+    .main { padding: 40px 20px; }
+    .section-body { padding: 20px; }
+    .plan-grid { grid-template-columns: 1fr; }
+    .meta-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="header">
+  <div class="header-inner">
+    <div class="badge">Smith Right — Paid Diagnostic Report</div>
+    <h1 class="company-name">テスト株式会社<span>.</span></h1>
+    <p class="subtitle">海外広告診断書 — フル版（$30プラン）</p>
+    <div class="meta-grid">
+      <div class="meta-item">
+        <div class="meta-label">診断対象URL</div>
+        <div class="meta-value">https://example.com</div>
+      </div>
+      <div class="meta-item">
+        <div class="meta-label">担当者名</div>
+        <div class="meta-value">山田太郎</div>
+      </div>
+      <div class="meta-item">
+        <div class="meta-label">診断日</div>
+        <div class="meta-value">2026年05月15日</div>
+      </div>
+      <div class="meta-item">
+        <div class="meta-label">プラン</div>
+        <div class="meta-value">$30 フル診断</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SCORE HERO -->
+<div class="score-hero">
+  <div class="score-hero-inner">
+    <div class="score-circle">
+      <div class="score-number">45</div>
+      <div class="score-label">/ 100</div>
+    </div>
+    <div class="score-details">
+      <h2>現状では詳細な診断が困難ですが、この機会にLP制作から始める絶好のタイミングです。</h2>
+      <p>現在LPが存在しないため技術的な評価はできませんが、これは完璧な海外向けLPを一から構築できる大きなチャンスです。競合分析や戦略設計の機会として前向きに捉えることができます。</p>
+      <div class="score-bars">
+        <div class="score-bar-row">
+          <span class="score-bar-label">市場参入適性</span>
+          <div class="score-bar-track"><div class="score-bar-fill" style="width:8%"></div></div>
+          <span class="score-bar-val">8</span>
+        </div>
+        <div class="score-bar-row">
+          <span class="score-bar-label">ターゲット精度</span>
+          <div class="score-bar-track"><div class="score-bar-fill" style="width:6%"></div></div>
+          <span class="score-bar-val">6</span>
+        </div>
+        <div class="score-bar-row">
+          <span class="score-bar-label">競合優位性</span>
+          <div class="score-bar-track"><div class="score-bar-fill" style="width:8%"></div></div>
+          <span class="score-bar-val">8</span>
+        </div>
+        <div class="score-bar-row">
+          <span class="score-bar-label">LP/クリエイティブ</span>
+          <div class="score-bar-track"><div class="score-bar-fill" style="width:3%"></div></div>
+          <span class="score-bar-val">3</span>
+        </div>
+        <div class="score-bar-row">
+          <span class="score-bar-label">メッセージ戦略</span>
+          <div class="score-bar-track"><div class="score-bar-fill" style="width:5%"></div></div>
+          <span class="score-bar-val">5</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MAIN -->
+<div class="main">
+
+  <!-- SECTION A -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-letter">A</div>
+      <div class="section-title">市場参入適性スコア</div>
+      <div class="section-score-badge">8 / 20</div>
+    </div>
+    <div class="section-body">
+      <p>テスト株式会社の海外展開における市場参入適性を評価しました。現在LPが存在しない状況ですが、これは海外市場に特化した最適なWebプレゼンスを構築する絶好の機会として捉えることができます。
+
+多くの企業が既存の日本向けLPを英語化して失敗する中、貴社は最初から海外ユーザーのニーズに合わせた設計が可能です。この白紙状態は競合優位性を築く大きなアドバンテージとなります。</p>
+      <div class="callout positive">
+        <div class="callout-label">強み</div>
+        <p>既存のバイアスに縛られることなく、海外市場に最適化されたWebプレゼンスを構築できる柔軟性があります。</p>
+      </div>
+      <div class="callout warning">
+        <div class="callout-label">注意点</div>
+        <p>LP制作と並行して市場調査とターゲティングを精密に行うことで、より効果的な海外展開が実現できます。</p>
+      </div>
+      <p>現段階では具体的なサービス内容や業界が不明ですが、これは逆に言えば市場のニーズを徹底的に調査してから最適なポジショニングを決められるということです。競合他社の成功事例と失敗事例を分析し、それらを上回る価値提案を設計する時間的余裕があります。</p>
+    </div>
+  </div>
+
+  <!-- SECTION B -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-letter">B</div>
+      <div class="section-title">ターゲット顧客分析</div>
+      <div class="section-score-badge">6 / 10</div>
+    </div>
+    <div class="section-body">
+      <p>現状では具体的なターゲット顧客の特定ができませんが、LP制作プロセスでペルソナ設定から始められる利点があります。</p>
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>項目</th>
+            <th>分析内容</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>主要ターゲット層</td><td>業界・サービス内容確認後に詳細設定</td></tr>
+          <tr><td>購買動機</td><td>価値提案明確化後に特定</td></tr>
+          <tr><td>情報収集チャネル</td><td>ターゲット確定後にチャネル選定</td></tr>
+          <tr><td>意思決定者</td><td>BtoB/BtoC判断後に決定者分析</td></tr>
+        </tbody>
+      </table>
+      <p>この段階でターゲット顧客分析を徹底的に行うことで、競合他社よりも精密なペルソナ設定が可能です。海外市場の文化的背景、購買行動、情報収集パターンを詳細に調査し、それに基づいた顧客中心のLP設計ができます。</p>
+    </div>
+  </div>
+
+  <!-- SECTION C -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-letter">C</div>
+      <div class="section-title">競合ポジショニング分析</div>
+      <div class="section-score-badge">8 / 10</div>
+    </div>
+    <div class="section-body">
+      <p>具体的な競合分析のためには業界とサービス内容の確認が必要ですが、競合調査から始められる戦略的優位性があります。</p>
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>競合タイプ</th>
+            <th>特徴</th>
+            <th>テスト株式会社の優位点</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>直接競合（同業他社）</td><td>業界確認後に詳細分析</td><td>後発優位性を活かした差別化戦略</td></tr>
+          <tr><td>間接競合（代替ソリューション）</td><td>市場調査後に特定</td><td>包括的なソリューション提供の可能性</td></tr>
+          <tr><td>潜在競合（新規参入者）</td><td>トレンド分析後に予測</td><td>先行投資による市場シェア確保</td></tr>
+        </tbody>
+      </table>
+      <div class="callout">
+        <div class="callout-label">推奨ポジション</div>
+        <p>競合分析を徹底的に行い、市場のギャップを狙った独自ポジションの確立を推奨します。</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION D -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-letter">D</div>
+      <div class="section-title">LP・広告クリエイティブ診断</div>
+      <div class="section-score-badge">3 / 10</div>
+    </div>
+    <div class="section-body">
+      <p>現在LPが存在しないため、海外市場向けの最適なデザインとUXを一から構築できる絶好の機会です。</p>
+      <ul class="check-list green">
+        <li>白紙状態からの最適設計が可能</li>
+<li>海外ユーザビリティ基準での制作機会</li>
+<li>A/Bテスト前提の設計が可能</li>
+      </ul>
+      <ul class="check-list red">
+        <li>LP制作が最優先課題</li>
+<li>コンテンツ戦略の策定が必要</li>
+<li>ビジュアルアイデンティティの確立が必要</li>
+      </ul>
+      <div class="callout warning">
+        <div class="callout-label">最優先改善点</div>
+        <p>海外ユーザーの行動パターンに最適化されたLP制作が最重要です。</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION E -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-letter">E</div>
+      <div class="section-title">キーワード・メッセージ戦略</div>
+      <div class="section-score-badge">5 / 10</div>
+    </div>
+    <div class="section-body">
+      <p>キーワード戦略は業界確定後に詳細設計しますが、多言語SEO対応の基盤設計から始められる優位性があります。</p>
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>推奨キーワード</th>
+            <th>意図</th>
+            <th>優先度</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>業界キーワード1</td><td>情報収集</td><td>高</td></tr>
+          <tr><td>業界キーワード2</td><td>比較検討</td><td>高</td></tr>
+          <tr><td>ソリューションキーワード</td><td>課題解決</td><td>中</td></tr>
+          <tr><td>ブランドキーワード</td><td>指名検索</td><td>中</td></tr>
+        </tbody>
+      </table>
+      <p>業界とターゲット市場確定後、現地の検索傾向に基づいたキーワード選定と、文化的ニュアンスを考慮したメッセージング戦略を構築します。</p>
+    </div>
+  </div>
+
+  <div class="divider">Section F – J</div>
+
+  <!-- SECTION F -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-letter">F</div>
+      <div class="section-title">媒体選定・広告チャネル戦略</div>
+      <div class="section-score-badge">8 / 10</div>
+    </div>
+    <div class="section-body">
+      <p>媒体選定は業界とターゲット確定後に最適化しますが、主要プラットフォームでの基盤構築準備は進められます。</p>
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>媒体</th>
+            <th>適性</th>
+            <th>推奨予算配分</th>
+            <th>理由</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Google Search</td><td>○</td><td>35%</td><td>グローバル検索需要の取り込み</td></tr>
+          <tr><td>Meta Ads</td><td>○</td><td>25%</td><td>詳細ターゲティングの活用</td></tr>
+          <tr><td>LinkedIn</td><td>△</td><td>25%</td><td>BtoB向けの可能性考慮</td></tr>
+          <tr><td>YouTube</td><td>△</td><td>15%</td><td>動画コンテンツの将来展開</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- SECTION G -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-letter">G</div>
+      <div class="section-title">予算配分シミュレーション</div>
+      <div class="section-score-badge">参考値</div>
+    </div>
+    <div class="section-body">
+      <p>LP完成後の段階的な予算投入により、リスクを最小化しながらROIを最大化する計画を推奨します。</p>
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>フェーズ</th>
+            <th>期間</th>
+            <th>推奨月額予算</th>
+            <th>目標指標</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>テスト期</td><td>1〜2ヶ月目</td><td>$1,000〜1,500/月</td><td>LP完成・基本データ収集</td></tr>
+          <tr><td>検証期</td><td>3〜4ヶ月目</td><td>$2,000〜3,000/月</td><td>CVR改善・コスト最適化</td></tr>
+          <tr><td>拡大期</td><td>5ヶ月目〜</td><td>$4,000〜/月</td><td>ROI 3倍以上達成</td></tr>
+        </tbody>
+      </table>
+      <div class="callout positive">
+        <div class="callout-label">予測ROI</div>
+        <p>LP制作投資を含めても、適切な戦略実行により6-12ヶ月でのROI回収が期待できます。</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION H -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-letter">H</div>
+      <div class="section-title">改善アクションプラン（90日）</div>
+      <div class="section-score-badge">ロードマップ</div>
+    </div>
+    <div class="section-body">
+      <p>LP制作から本格運用まで、段階的に海外展開基盤を構築する90日プランを提案します。</p>
+      <div class="plan-grid">
+        <div class="plan-phase">
+          <div class="plan-phase-label">Phase 1 — Day 1-30</div>
+          <h4>基盤構築・LP制作</h4>
+          <ul>
+            <li>市場調査・競合分析</li>
+            <li>ターゲットペルソナ設定</li>
+            <li>LP設計・制作開始</li>
+            <li>多言語SEO基盤準備</li>
+          </ul>
+        </div>
+        <div class="plan-phase">
+          <div class="plan-phase-label">Phase 2 — Day 31-60</div>
+          <h4>LP完成・テスト開始</h4>
+          <ul>
+            <li>LP公開・基本設定</li>
+            <li>小規模広告テスト開始</li>
+            <li>初期データ収集・分析</li>
+            <li>改善点の特定・修正</li>
+          </ul>
+        </div>
+        <div class="plan-phase">
+          <div class="plan-phase-label">Phase 3 — Day 61-90</div>
+          <h4>本格運用・拡大</h4>
+          <ul>
+            <li>予算拡大・媒体追加</li>
+            <li>コンバージョン最適化</li>
+            <li>新市場テスト検討</li>
+            <li>長期戦略の策定</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION I -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-letter">I</div>
+      <div class="section-title">リスク・注意点</div>
+      <div class="section-score-badge">要確認</div>
+    </div>
+    <div class="section-body">
+      <p>現段階でのリスクは主に準備段階に関わるものですが、適切な準備により回避可能です。</p>
+      <ul class="check-list">
+        <li>LP制作期間の長期化</li>
+        <li>ターゲット設定の曖昧さ</li>
+        <li>競合分析の不足</li>
+        <li>予算配分の最適化遅れ</li>
+      </ul>
+      <div class="callout danger">
+        <div class="callout-label">最重要リスク</div>
+        <p>最重要リスクは準備段階での方向性確定の遅れです。しかし、十分な準備時間があることで、このリスクは競合優位性に転換できます。</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION J -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-letter">J</div>
+      <div class="section-title">スコアサマリー＋次のステップ</div>
+      <div class="section-score-badge">総評</div>
+    </div>
+    <div class="section-body">
+      <div class="summary-grid">
+        <div class="summary-item">
+          <div class="summary-item-score">8</div>
+          <div class="summary-item-label">市場参入</div>
+        </div>
+        <div class="summary-item">
+          <div class="summary-item-score">6</div>
+          <div class="summary-item-label">ターゲット</div>
+        </div>
+        <div class="summary-item">
+          <div class="summary-item-score">8</div>
+          <div class="summary-item-label">競合優位</div>
+        </div>
+        <div class="summary-item">
+          <div class="summary-item-score">3</div>
+          <div class="summary-item-label">LP/クリエイティブ</div>
+        </div>
+        <div class="summary-item">
+          <div class="summary-item-score">5</div>
+          <div class="summary-item-label">メッセージ</div>
+        </div>
+        <div class="summary-item">
+          <div class="summary-item-score">8</div>
+          <div class="summary-item-label">媒体選定</div>
+        </div>
+        <div class="summary-item">
+          <div class="summary-item-score" style="font-size:32px; color:#fff;">45</div>
+          <div class="summary-item-label">総合スコア</div>
+        </div>
+      </div>
+      <p>テスト株式会社の海外展開は、現在LP未構築という状況を最大の機会として活用できる段階にあります。多くの企業が既存資産に縛られて海外展開に苦労する中、貴社は海外市場に最適化された完璧なWebプレゼンスを構築できる理想的なポジションにいます。
+
+適切な市場調査とターゲット設定、そして海外ユーザーの行動パターンに最適化されたLP制作を行うことで、競合他社を上回る成果を実現できる可能性が高いです。この機会を活かし、戦略的に海外展開を進めることを強く推奨します。</p>
+      <div class="callout positive">
+        <div class="callout-label">Smith Rightからの一言</div>
+        <p>「ゼロから始める」ことは決して不利ではありません。むしろ、最高の海外向けプレゼンスを構築できる最大のチャンスです。Smith Rightが全力でサポートいたします。</p>
+      </div>
+      <ul class="check-list">
+        <li>詳細ヒアリングによる業界・サービス内容の確認</li>
+        <li>ターゲット市場・競合分析の実施</li>
+        <li>海外向けLP制作戦略の策定</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta-block">
+    <h2>次のステップへ進みませんか？</h2>
+    <p>診断内容をもとに、具体的な広告戦略・LP改善・運用サポートをご提供します。<br>まずは無料でご相談ください。</p>
+    <a href="https://www.upwork.com/" class="cta-btn">無料相談を予約する →</a>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <strong>Smith Right</strong> — 海外広告診断サービス<br>
+  本診断書は テスト株式会社 様専用です。無断転載・共有はご遠慮ください。<br>
+  診断日：2026年05月15日 ／ レポートID：SR-20260515-3772
+</div>
+
+</body>
+</html>
