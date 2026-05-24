@@ -328,6 +328,12 @@ input:focus {
   background: rgba(255,255,255,0.16) !important;
   outline: none;
 }
+
+/* ラベル文字を明るく */
+label {
+  color: rgba(255,255,255,0.75) !important;
+  font-size: 13px !important;
+}
 </style>
 </head>
 <body>
@@ -650,7 +656,13 @@ input:focus {
           style="background:var(--gold);color:var(--navy);font-weight:700;font-size:14px;padding:13px 28px;border-radius:8px;border:none;cursor:pointer;letter-spacing:0.5px;font-family:inherit;transition:background 0.2s;">
           → Send Me the Full Report
         </button>
-        <p style="font-size:11px;color:rgba(255,255,255,0.3);text-align:center;line-height:1.6;">No payment required. Report delivered within 3 business days.<br>We respect your privacy and will never share your information.</p>
+        <p style="font-size:12px;color:rgba(255,255,255,0.4);text-align:center;line-height:1.6;">No payment required. Report delivered within 3 business days.<br>We respect your privacy and will never share your information.</p>
+        <p style="font-size:12px;color:rgba(255,255,255,0.5);text-align:left;line-height:1.8;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:12px 16px;margin-top:8px;">
+          📬 <strong style="color:rgba(255,255,255,0.7);">To make sure you receive the report:</strong><br>
+          · We recommend using a <strong style="color:rgba(255,255,255,0.7);">company email</strong> rather than Gmail/Yahoo if possible.<br>
+          · If using Gmail, please check your <strong style="color:rgba(255,255,255,0.7);">Promotions</strong> and <strong style="color:rgba(255,255,255,0.7);">Spam</strong> folders.<br>
+          · To ensure delivery, add <strong style="color:rgba(255,255,255,0.7);">saori.yoyo@gmail.com</strong> to your contacts.
+        </p>
       </form>
     </div>
 
@@ -670,21 +682,25 @@ input:focus {
       };
 
       try {
-        const res = await fetch('https://script.google.com/macros/s/AKfycbyGqp-hpH5y9DRxUNGTWlz4xB9u1G73FdCSvVEVFd0M8l4xyKDwRMMeZ--wLZuWaODw/exec', {
+        const res = await fetch('https://script.google.com/macros/s/AKfycbxEj81V4MQ69VDF6fnpJEu4klKwViO-rWO_p-J_RSKD4Dh0zwUtsxORMaR2T5HL08dYfg/exec', {
           method: 'POST',
           body: JSON.stringify(payload)
         });
         msg.style.display = 'block';
-        msg.style.background = 'rgba(76,201,122,0.1)';
-        msg.style.border = '1px solid rgba(76,201,122,0.3)';
-        msg.style.color = '#4cc97a';
+        msg.style.background = 'rgba(76,201,122,0.2)';
+        msg.style.border = '2px solid rgba(76,201,122,0.8)';
+        msg.style.color = '#ffffff';
+        msg.style.fontSize = '15px';
+        msg.style.fontWeight = '600';
         msg.textContent = '✓ Thank you! Your full report will be delivered within 3 business days.';
         btn.style.display = 'none';
       } catch(err) {
         msg.style.display = 'block';
-        msg.style.background = 'rgba(220,38,38,0.1)';
-        msg.style.border = '1px solid rgba(220,38,38,0.3)';
-        msg.style.color = '#f87171';
+        msg.style.background = 'rgba(220,38,38,0.25)';
+        msg.style.border = '2px solid rgba(220,38,38,0.8)';
+        msg.style.color = '#ffffff';
+        msg.style.fontSize = '15px';
+        msg.style.fontWeight = '600';
         msg.textContent = 'Something went wrong. Please email us directly at saori@smithright.ai';
         btn.textContent = '→ Send Me the Full Report';
         btn.disabled = false;
