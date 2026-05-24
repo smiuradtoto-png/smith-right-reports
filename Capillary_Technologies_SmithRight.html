@@ -348,7 +348,7 @@ label {
   <div class="header-sub">Complimentary analysis — prepared by Smith Right AI + Saori Miura</div>
   <div class="header-meta">
     <div class="meta-item"><strong>Company</strong><span>Capillary Technologies</span></div>
-    <div class="meta-item"><strong>Country</strong><span>Singapore</span></div>
+    <div class="meta-item"><strong>Country</strong><span>India</span></div>
     <div class="meta-item"><strong>Report Date</strong><span>May 2026</span></div>
     <div class="meta-item"><strong>Prepared by</strong><span>Smith Right AI + Saori Miura</span></div>
   </div>
@@ -366,7 +366,7 @@ label {
       <p style="font-size:15px; color:#374151; line-height:1.8;">
         Thank you for your interest in the Japanese market and for giving us the opportunity to analyze your product from a Japan-market perspective.<br><br>
         Capillary Technologies has genuine potential in Japan. This report is designed not to discourage, but to highlight where that potential is strongest — and where small adjustments in positioning, communication, and localization could significantly improve your results.<br><br>
-        日本のリテール市場のデジタル化需要とオムニチャネル戦略の浸透により参入機会は高い。特にファッション・化粧品ブランドへの展開が期待される。
+        日本の小売業界のデジタル変革需要と顧客体験向上のニーズに合致。既にアジア市場での実績があるため日本展開の可能性は高い。
       </p>
     </div>
   </div>
@@ -429,7 +429,7 @@ label {
         <div style="background:#f0f9ff;border:1px solid #bae6fd;border-radius:10px;padding:16px;">
           <div style="font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:#0284c7;margin-bottom:8px;">🌍 Global Traction</div>
           <div class="blurred-block" style="font-size:13px;color:#374151;line-height:1.6;">
-            <p>アジア太平洋地域で200以上のブランドとの実績を持ち、AIドリブンなパーソナライゼーション機能に強み。オムニチャネル対応で顧客データの統合管理が可能。</p>
+            <p>AI/ML技術を活用した高度な顧客セグメンテーションと予測分析機能。アジア太平洋地域で200以上のブランドとの豊富な導入実績を持つ。</p>
           </div>
         </div>
         <div style="background:#f0fdf4;border:1px solid #bbf7d0;border-radius:10px;padding:16px;">
@@ -442,7 +442,7 @@ label {
       <div style="background:#fffbeb;border:1px solid #fde68a;border-radius:10px;padding:16px;">
         <div style="font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:#d97706;margin-bottom:8px;">💡 Key Insight</div>
         <div class="blurred-block" style="font-size:13px;color:#374151;line-height:1.6;">
-          <p>AIを活用したカスタマーエンゲージメントプラットフォームを提供するSaaS企業。リテール・eコマース企業向けにCRM、ロイヤルティプログラム、マーケティングオートメーションを統合したソリューションを展開。</p>
+          <p>顧客エンゲージメントとロイヤルティプログラムのためのAI駆動型SaaSプラットフォームを提供。小売業界向けにCRM、マーケティングオートメーション、データアナリティクスソリューションを統合的に展開している。</p>
         </div>
       </div>
     </div>
@@ -636,10 +636,15 @@ label {
               style="width:100%;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.15);color:white;padding:12px 14px;border-radius:8px;font-size:15px;outline:none;font-family:inherit;">
           </div>
           <div>
-            <label style="font-size:13px;letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,0.6);display:block;margin-bottom:6px;">Company Email *</label>
-            <input type="email" id="f_email" required placeholder="you@company.com"
+            <label style="font-size:13px;letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,0.6);display:block;margin-bottom:6px;">Company Name *</label>
+            <input type="text" id="f_company" required placeholder="e.g. Acme Inc."
               style="width:100%;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.15);color:white;padding:12px 14px;border-radius:8px;font-size:15px;outline:none;font-family:inherit;">
           </div>
+        </div>
+        <div>
+          <label style="font-size:13px;letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,0.6);display:block;margin-bottom:6px;">Company Email *</label>
+          <input type="email" id="f_email" required placeholder="you@company.com"
+            style="width:100%;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.15);color:white;padding:12px 14px;border-radius:8px;font-size:15px;outline:none;font-family:inherit;">
         </div>
         <div>
           <label style="font-size:13px;letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,0.6);display:block;margin-bottom:6px;">Landing Page or Product URL *</label>
@@ -676,6 +681,7 @@ label {
 
       const payload = {
         name:     document.getElementById('f_name').value,
+        company:  document.getElementById('f_company').value,
         email:    document.getElementById('f_email').value,
         url:      document.getElementById('f_url').value,
         linkedin: document.getElementById('f_linkedin').value
