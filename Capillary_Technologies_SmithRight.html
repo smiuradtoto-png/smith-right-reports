@@ -319,14 +319,25 @@ body {
 input::placeholder {
   color: rgba(255,255,255,0.55) !important;
 }
-input {
+input[type="text"],
+input[type="email"],
+input[type="url"] {
   color: white !important;
-  background: rgba(255,255,255,0.12) !important;
+  background: rgba(255,255,255,0.07) !important;
+  -webkit-text-fill-color: white !important;
 }
-input:focus {
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus {
   border-color: rgba(201,168,76,0.6) !important;
-  background: rgba(255,255,255,0.16) !important;
+  background: rgba(255,255,255,0.1) !important;
   outline: none;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px rgba(30,40,55,1) inset !important;
+  -webkit-text-fill-color: white !important;
 }
 
 /* ラベル文字を明るく */
@@ -366,7 +377,7 @@ label {
       <p style="font-size:15px; color:#374151; line-height:1.8;">
         Thank you for your interest in the Japanese market and for giving us the opportunity to analyze your product from a Japan-market perspective.<br><br>
         Capillary Technologies has genuine potential in Japan. This report is designed not to discourage, but to highlight where that potential is strongest — and where small adjustments in positioning, communication, and localization could significantly improve your results.<br><br>
-        日本の小売業界のデジタル変革需要と顧客体験向上への関心の高まりから、参入可能性は高い。特に大手小売チェーンや百貨店での導入機会が見込める。
+        日本の小売業界のデジタル変革需要が高まる中、既存のアジア展開実績を活かした参入可能性が高い。特にオムニチャネル戦略を推進する企業にとって魅力的なソリューション。
       </p>
     </div>
   </div>
@@ -429,7 +440,7 @@ label {
         <div style="background:#f0f9ff;border:1px solid #bae6fd;border-radius:10px;padding:16px;">
           <div style="font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:#0284c7;margin-bottom:8px;">🌍 Global Traction</div>
           <div class="blurred-block" style="font-size:13px;color:#374151;line-height:1.6;">
-            <p>アジア太平洋地域での豊富な導入実績と、AIを活用した高度な顧客セグメンテーション・パーソナライゼーション技術。200以上のブランドでの実績があり、特にオムニチャネル戦略に強みを持つ。</p>
+            <p>アジア太平洋地域での強固な市場基盤とAI技術を活用した高度な顧客インサイト分析機能。200以上のブランドとの実績を持つ。</p>
           </div>
         </div>
         <div style="background:#f0fdf4;border:1px solid #bbf7d0;border-radius:10px;padding:16px;">
@@ -442,7 +453,7 @@ label {
       <div style="background:#fffbeb;border:1px solid #fde68a;border-radius:10px;padding:16px;">
         <div style="font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:#d97706;margin-bottom:8px;">💡 Key Insight</div>
         <div class="blurred-block" style="font-size:13px;color:#374151;line-height:1.6;">
-          <p>Capillary Technologiesは、小売業向けのAI駆動型顧客エンゲージメントプラットフォームを提供するSaaS企業です。ロイヤルティプログラム、パーソナライゼーション、マーケティングオートメーションなどの統合ソリューションを通じて、ブランドと消費者の関係強化を支援しています。</p>
+          <p>顧客エンゲージメントとロイヤルティプログラムのためのAI駆動型SaaSプラットフォームを提供。小売業界向けにパーソナライズされたマーケティングソリューションと顧客データ分析を展開している。</p>
         </div>
       </div>
     </div>
@@ -688,7 +699,7 @@ label {
       };
 
       try {
-        const res = await fetch('https://script.google.com/macros/s/AKfycbxEj81V4MQ69VDF6fnpJEu4klKwViO-rWO_p-J_RSKD4Dh0zwUtsxORMaR2T5HL08dYfg/exec', {
+        const res = await fetch('https://script.google.com/macros/s/AKfycbyneenrsE_hJ3OM4weX3VY1n1k11xElHeAWe3RwXjtBby_q5WPeST8iS-kN7Sfo6Sb96g/exec', {
           method: 'POST',
           body: JSON.stringify(payload)
         });
