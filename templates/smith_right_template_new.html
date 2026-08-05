@@ -357,14 +357,6 @@ label {
   </div>
   <h1>{{COMPANY_NAME}}<span> — Japan Market</span><br>Audit Report</h1>
   <div class="header-sub">Complimentary analysis — prepared by Smith Right AI + Saori Miura</div>
-  <div style="background:rgba(220,38,38,0.2);border:1px solid rgba(220,38,38,0.5);border-radius:8px;padding:12px 18px;margin-bottom:16px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;">
-    <div style="font-size:13px;color:rgba(255,255,255,0.9);line-height:1.6;">
-      ⚠️ <strong>This report will be removed in 7 days.</strong> Please download a copy if you'd like to keep it.
-    </div>
-    <a href="#download-section" style="background:var(--gold);color:var(--navy);font-size:12px;font-weight:700;padding:7px 16px;border-radius:6px;text-decoration:none;white-space:nowrap;">
-      ↓ Download PDF
-    </a>
-  </div>
   <div class="header-meta">
     <div class="meta-item"><strong>Company</strong><span>{{COMPANY_NAME}}</span></div>
     <div class="meta-item"><strong>Country</strong><span>{{COUNTRY}}</span></div>
@@ -641,97 +633,24 @@ label {
       </p>
     </div>
 
-    <!-- Full Report Request Form -->
-    <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(201,168,76,0.3);border-radius:12px;padding:28px;margin-top:24px;">
-      <h4 style="color:var(--gold);font-size:18px;font-weight:600;margin-bottom:8px;">📋 Request Your Full Diagnostic Report — No charge</h4>
-      <p style="font-size:15px;color:rgba(255,255,255,0.75);margin-bottom:20px;line-height:1.8;">
-        If this snapshot resonated with you, we'd love to send you the complete report — all 10 sections, fully unlocked, built from your actual landing page. Just fill in the details below and we'll take care of the rest.
-      </p>
-      <form id="reportForm" style="display:flex;flex-direction:column;gap:14px;">
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
-          <div>
-            <label style="font-size:13px;letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,0.6);display:block;margin-bottom:6px;">Your Name *</label>
-            <input type="text" id="f_name" required placeholder="e.g. Alex Johnson"
-              style="width:100%;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.15);color:white;padding:12px 14px;border-radius:8px;font-size:15px;outline:none;font-family:inherit;">
-          </div>
-          <div>
-            <label style="font-size:13px;letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,0.6);display:block;margin-bottom:6px;">Company Name *</label>
-            <input type="text" id="f_company" required placeholder="e.g. Acme Inc."
-              style="width:100%;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.15);color:white;padding:12px 14px;border-radius:8px;font-size:15px;outline:none;font-family:inherit;">
-          </div>
-        </div>
-        <div>
-          <label style="font-size:13px;letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,0.6);display:block;margin-bottom:6px;">Company Email *</label>
-          <input type="email" id="f_email" required placeholder="you@company.com"
-            style="width:100%;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.15);color:white;padding:12px 14px;border-radius:8px;font-size:15px;outline:none;font-family:inherit;">
-        </div>
-        <div>
-          <label style="font-size:13px;letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,0.6);display:block;margin-bottom:6px;">Landing Page or Product URL *</label>
-          <input type="url" id="f_url" required placeholder="https://yourproduct.com"
-            style="width:100%;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.15);color:white;padding:12px 14px;border-radius:8px;font-size:15px;outline:none;font-family:inherit;">
-        </div>
-        <div>
-          <label style="font-size:13px;letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,0.6);display:block;margin-bottom:6px;">Your LinkedIn Profile URL</label>
-          <input type="url" id="f_linkedin" placeholder="https://linkedin.com/in/yourname"
-            style="width:100%;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.15);color:white;padding:12px 14px;border-radius:8px;font-size:15px;outline:none;font-family:inherit;">
-        </div>
-        <div id="form-msg" style="display:none;font-size:13px;padding:10px 14px;border-radius:8px;"></div>
-        <button type="submit" id="submitBtn"
-          style="background:var(--gold);color:var(--navy);font-weight:700;font-size:14px;padding:13px 28px;border-radius:8px;border:none;cursor:pointer;letter-spacing:0.5px;font-family:inherit;transition:background 0.2s;">
-          → Send Me the Full Report
-        </button>
-        <p style="font-size:12px;color:rgba(255,255,255,0.4);text-align:center;line-height:1.6;">No payment required. Report delivered within 3 business days.<br>We respect your privacy and will never share your information.</p>
-        <p style="font-size:12px;color:rgba(255,255,255,0.5);text-align:left;line-height:1.8;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:12px 16px;margin-top:8px;">
-          📬 <strong style="color:rgba(255,255,255,0.7);">To make sure you receive the report:</strong><br>
-          · We recommend using a <strong style="color:rgba(255,255,255,0.7);">company email</strong> rather than Gmail/Yahoo if possible.<br>
-          · If using Gmail, please check your <strong style="color:rgba(255,255,255,0.7);">Promotions</strong> and <strong style="color:rgba(255,255,255,0.7);">Spam</strong> folders.<br>
-          · To ensure delivery, add <strong style="color:rgba(255,255,255,0.7);">saori.yoyo@gmail.com</strong> to your contacts.
+    <!-- Mark Section -->
+    <div style="margin-top:32px;border-radius:16px;overflow:hidden;border:1px solid rgba(201,168,76,0.3);">
+      <img src="https://smiuradtoto-png.github.io/smith-right-reports/Mark.png"
+        alt="Mark — AI Project Consultant"
+        style="width:100%;display:block;">
+      <div style="background:rgba(255,255,255,0.05);padding:28px;">
+        <p style="font-size:15px;color:rgba(255,255,255,0.8);line-height:1.9;margin-bottom:20px;">
+          🇯🇵 <strong style="color:var(--gold-light);">Japan Market Consulting</strong><br><br>
+          Every company entering Japan faces different challenges. I help overseas companies understand the Japanese market, localize their products and messaging, design market entry strategies, and build practical go-to-market plans based on their business goals.<br><br>
+          Whether you're exploring opportunities, preparing for launch, or looking to improve your current approach, consulting is tailored to the needs of each company.<br><br>
+          If you'd like an initial estimate before contacting me, you can use <strong style="color:var(--gold-light);">Mark</strong>, my AI consultation assistant. By answering a few questions (approximately 5–10 minutes), Mark will provide a preliminary estimate of the consulting scope, project budget, and recommended starting point for your company.
         </p>
-      </form>
+        <a href="https://mark-index.s-miura-dtoto.workers.dev/" target="_blank"
+          style="display:inline-block;background:var(--gold);color:var(--navy);font-weight:700;font-size:15px;padding:14px 32px;border-radius:8px;text-decoration:none;letter-spacing:0.5px;">
+          → Start with Mark
+        </a>
+      </div>
     </div>
-
-    <script>
-    document.getElementById('reportForm').addEventListener('submit', async function(e) {
-      e.preventDefault();
-      const btn = document.getElementById('submitBtn');
-      const msg = document.getElementById('form-msg');
-      btn.textContent = 'Sending...';
-      btn.disabled = true;
-
-      const payload = {
-        name:     document.getElementById('f_name').value,
-        company:  document.getElementById('f_company').value,
-        email:    document.getElementById('f_email').value,
-        url:      document.getElementById('f_url').value,
-        linkedin: document.getElementById('f_linkedin').value
-      };
-
-      try {
-        const res = await fetch('https://script.google.com/macros/s/AKfycbyneenrsE_hJ3OM4weX3VY1n1k11xElHeAWe3RwXjtBby_q5WPeST8iS-kN7Sfo6Sb96g/exec', {
-          method: 'POST',
-          body: JSON.stringify(payload)
-        });
-        msg.style.display = 'block';
-        msg.style.background = 'rgba(76,201,122,0.2)';
-        msg.style.border = '2px solid rgba(76,201,122,0.8)';
-        msg.style.color = '#ffffff';
-        msg.style.fontSize = '15px';
-        msg.style.fontWeight = '600';
-        msg.textContent = '✓ Thank you! Your full report will be delivered within 3 business days.';
-        btn.style.display = 'none';
-      } catch(err) {
-        msg.style.display = 'block';
-        msg.style.background = 'rgba(220,38,38,0.25)';
-        msg.style.border = '2px solid rgba(220,38,38,0.8)';
-        msg.style.color = '#ffffff';
-        msg.style.fontSize = '15px';
-        msg.style.fontWeight = '600';
-        msg.textContent = 'Something went wrong. Please email us directly at saori@smithright.ai';
-        btn.textContent = '→ Send Me the Full Report';
-        btn.disabled = false;
-      }
-    });
-    </script>
 
     <div class="signature">
       <p>With appreciation,</p>
@@ -740,18 +659,6 @@ label {
     </div>
   </div>
 
-</div>
-
-<!-- DOWNLOAD SECTION -->
-<div id="download-section" style="background:#1a2a3a;border-top:1px solid rgba(201,168,76,0.3);padding:40px 24px;text-align:center;">
-  <p style="font-size:13px;color:rgba(255,255,255,0.5);margin-bottom:8px;">⚠️ This report will be automatically removed in 7 days.</p>
-  <h3 style="font-family:'DM Serif Display',serif;font-size:22px;color:var(--gold);margin-bottom:12px;">Save a copy of this report</h3>
-  <p style="font-size:14px;color:rgba(255,255,255,0.65);margin-bottom:24px;line-height:1.7;">Click the button below to download this report as a PDF and keep it permanently.</p>
-  <button onclick="window.print()"
-    style="background:var(--gold);color:var(--navy);font-weight:700;font-size:15px;padding:14px 36px;border-radius:8px;border:none;cursor:pointer;letter-spacing:0.5px;font-family:inherit;">
-    ↓ Download as PDF
-  </button>
-  <p style="font-size:11px;color:rgba(255,255,255,0.3);margin-top:12px;">Use your browser's print dialog → Select "Save as PDF"</p>
 </div>
 
 <div class="footer">
