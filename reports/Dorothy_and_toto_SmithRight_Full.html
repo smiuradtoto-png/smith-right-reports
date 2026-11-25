@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dorothy and toto — Japan Market Audit Report | Smith Right</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy: #0d1b2a;
+  --navy2: #1b2d42;
+  --gold: #c9a84c;
+  --gold-light: #e8c97a;
+  --cream: #f8f5ef;
+  --white: #ffffff;
+  --gray: #6b7280;
+  --gray-light: #f1f0ee;
+  --red: #dc2626;
+  --orange: #ea580c;
+  --yellow: #d97706;
+  --green: #16a34a;
+  --blue: #2563eb;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--navy); line-height: 1.7; }
+.header { background: var(--navy); color: white; padding: 56px 48px 48px; position: relative; overflow: hidden; }
+.header::before { content: ''; position: absolute; top: -60px; right: -60px; width: 300px; height: 300px; border-radius: 50%; background: radial-gradient(circle, rgba(201,168,76,0.15) 0%, transparent 70%); }
+.header-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 32px; }
+.brand { font-family: 'DM Serif Display', serif; font-size: 13px; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); }
+.report-badge { background: rgba(201,168,76,0.15); border: 1px solid rgba(201,168,76,0.4); color: var(--gold-light); font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; padding: 6px 16px; border-radius: 20px; }
+.header h1 { font-family: 'DM Serif Display', serif; font-size: 42px; line-height: 1.15; margin-bottom: 8px; }
+.header h1 span { color: var(--gold); }
+.header-sub { font-size: 16px; color: rgba(255,255,255,0.6); margin-bottom: 32px; }
+.header-meta { display: flex; gap: 32px; flex-wrap: wrap; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.1); }
+.meta-item strong { display: block; font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-bottom: 3px; }
+.meta-item span { font-size: 14px; color: rgba(255,255,255,0.85); }
+.main { max-width: 860px; margin: 0 auto; padding: 48px 24px 80px; }
+.section { background: white; border-radius: 16px; margin-bottom: 24px; overflow: hidden; box-shadow: 0 1px 12px rgba(0,0,0,0.06); }
+.section-header { background: var(--navy); color: white; padding: 20px 32px; display: flex; align-items: center; gap: 14px; }
+.section-num { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--gold); letter-spacing: 1px; }
+.section-title { font-size: 16px; font-weight: 600; }
+.section-body { padding: 32px; }
+.blurred-block { /* blur removed for full report */ }
+.score-item { border: 1px solid #e5e7eb; border-radius: 12px; margin-bottom: 16px; overflow: hidden; }
+.score-item-header { display: grid; grid-template-columns: 1fr auto auto; align-items: center; gap: 16px; padding: 14px 20px; background: #f9fafb; border-bottom: 1px solid #e5e7eb; }
+.score-item-name { font-size: 14px; font-weight: 600; color: var(--navy); }
+.score-value { font-size: 14px; font-weight: 700; color: var(--navy); }
+.score-label { font-size: 11px; font-weight: 600; padding: 3px 10px; border-radius: 12px; white-space: nowrap; }
+.label-moderate { background: #fef9c3; color: #a16207; }
+.label-needs { background: #ffedd5; color: #c2410c; }
+.label-high-risk { background: #fee2e2; color: #b91c1c; }
+.score-gauge-wrap { padding: 14px 20px 6px; }
+.gauge-track { height: 8px; background: #e5e7eb; border-radius: 99px; overflow: hidden; margin-bottom: 4px; }
+.gauge-fill { height: 100%; border-radius: 99px; }
+.gauge-green { background: linear-gradient(90deg, #22c55e, #16a34a); }
+.gauge-blue { background: linear-gradient(90deg, #60a5fa, #2563eb); }
+.gauge-yellow { background: linear-gradient(90deg, #fbbf24, #d97706); }
+.gauge-orange { background: linear-gradient(90deg, #fb923c, #ea580c); }
+.gauge-red { background: linear-gradient(90deg, #f87171, #dc2626); }
+.score-detail { padding: 14px 20px 18px; }
+.detail-reason-label { font-size: 13px; font-weight: 600; color: var(--navy); margin-bottom: 6px; }
+.detail-hint-label { font-size: 13px; font-weight: 600; color: var(--navy); margin-top: 10px; margin-bottom: 4px; }
+.blur-overlay { position: relative; }
+.blur-content { /* blur removed for full report */ }
+.closing { background: var(--navy); border-radius: 16px; padding: 40px; color: white; margin-bottom: 24px; }
+.closing h3 { font-family: 'DM Serif Display', serif; font-size: 24px; color: var(--gold); margin-bottom: 16px; }
+.closing p { font-size: 14px; color: rgba(255,255,255,0.8); margin-bottom: 12px; line-height: 1.7; }
+.mark-box { background: rgba(201,168,76,0.1); border: 1px solid rgba(201,168,76,0.3); border-radius: 12px; padding: 24px; margin-top: 24px; }
+.mark-box h4 { color: var(--gold); font-size: 15px; font-weight: 600; margin-bottom: 12px; }
+.mark-topics { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.mark-topic { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); color: rgba(255,255,255,0.85); font-size: 12px; padding: 4px 12px; border-radius: 20px; }
+.mark-note { font-size: 12px; color: rgba(255,255,255,0.5); line-height: 1.6; }
+.signature { margin-top: 24px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.1); font-size: 13px; color: rgba(255,255,255,0.6); }
+.signature a { color: var(--gold); }
+.footer { text-align: center; padding: 24px; font-size: 12px; color: #9ca3af; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-top">
+    <div class="brand">Smith Right — Japan Market Intelligence</div>
+    <div class="report-badge">Full Diagnostic Report</div>
+  </div>
+  <h1>Dorothy and toto<span> — Japan Market</span><br>Audit Report</h1>
+  <div class="header-sub">Full analysis — prepared by Smith Right AI + Saori Miura</div>
+  <div style="background:rgba(220,38,38,0.2);border:1px solid rgba(220,38,38,0.5);border-radius:8px;padding:12px 18px;margin-bottom:16px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;">
+    <div style="font-size:13px;color:rgba(255,255,255,0.9);line-height:1.6;">⚠️ <strong>This report will be removed in 10 days.</strong> Please download a copy if you'd like to keep it.</div>
+    <a href="#download-section" style="background:var(--gold);color:var(--navy);font-size:12px;font-weight:700;padding:7px 16px;border-radius:6px;text-decoration:none;white-space:nowrap;">↓ Download PDF</a>
+  </div>
+  <div class="header-meta">
+    <div class="meta-item"><strong>Company</strong><span>Dorothy and toto</span></div>
+    <div class="meta-item"><strong>Country</strong><span>{{COUNTRY}}</span></div>
+    <div class="meta-item"><strong>Report Date</strong><span>November 25, 2026</span></div>
+    <div class="meta-item"><strong>Prepared by</strong><span>Smith Right AI + Saori Miura</span></div>
+  </div>
+</div>
+
+<div class="main">
+
+  <div class="section">
+    <div class="section-header"><span class="section-num">—</span><span class="section-title">Dear Dorothy and toto Team</span></div>
+    <div class="section-body">
+      <p style="font-size:15px;color:#374151;line-height:1.8;">
+        Thank you for your interest in the Japanese market and for giving us the opportunity to analyze your product from a Japan-market perspective.<br><br>
+        Dorothy and toto has genuine potential in Japan. This report is designed not to discourage, but to highlight where that potential is strongest — and where small adjustments in positioning, communication, and localization could significantly improve your results.<br><br>
+        {{JAPAN_POTENTIAL}}
+      </p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header"><span class="section-num">01</span><span class="section-title">Executive Summary</span></div>
+    <div class="section-body">
+      <div style="margin-bottom:20px;">
+        <div style="font-size:11px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:#16a34a;margin-bottom:8px;">✅ Key Strengths</div>
+        <ul style="padding-left:18px;color:#374151;font-size:14px;">
+          <li style="margin-bottom:6px;">Clear AI agent customization offering with practical workflow automation focus appeals to Japan's efficiency-driven business culture and digital transformation needs</li>
+          <li style="margin-bottom:6px;">Visual design aesthetic with clean layout and structured service presentation aligns well with Japanese preference for organized, professional web experiences</li>
+          <li style="margin-bottom:6px;">Multi-platform integration capability (web, LINE, Slack mentioned) matches Japan's diverse digital ecosystem including strong LINE business adoption</li>
+        </ul>
+      </div>
+      <div style="margin-bottom:20px;">
+        <div style="font-size:11px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:#ea580c;margin-bottom:8px;">⚠️ Key Improvement Areas</div>
+        <ul style="padding-left:18px;color:#374151;font-size:14px;">
+          <li style="margin-bottom:6px;">Add specific case studies or use case examples from Japanese industries (manufacturing, retail, financial services) to demonstrate local market understanding and build immediate relevance</li>
+          <li style="margin-bottom:6px;">Incorporate trust signals such as security certifications (ISO 27001, ISMS), data localization commitments, and transparent pricing to address Japan's high due diligence standards</li>
+          <li style="margin-bottom:6px;">Develop Japanese-language testimonials, client logos, or partner badges to establish social proof and market credibility essential for Japanese B2B decision-making</li>
+        </ul>
+      </div>
+      <div>
+        <div style="font-size:11px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:#2563eb;margin-bottom:12px;">📋 Recommended Improvement Steps</div>
+        <p style="font-size:14px;color:#374151;margin-bottom:8px;">Create Japan-specific landing page variant with localized use cases (e.g., customer service automation for EC sites, appointment booking for clinics) and bilingual support indicators</p>
+        <p style="font-size:14px;color:#374151;margin-bottom:8px;">Add security and privacy section highlighting data protection measures, compliance with Japanese privacy laws, and optional on-premise/Japan-cloud deployment options</p>
+        <p style="font-size:14px;color:#374151;">Implement softer, consultative CTA flow with 'Request Information' or 'Free Consultation' as primary action, supplemented by downloadable resources (whitepapers, service guides)</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header"><span class="section-num">02</span><span class="section-title">Japan Market Potential</span></div>
+    <div class="section-body">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;">
+        <div style="background:#f0f9ff;border:1px solid #bae6fd;border-radius:10px;padding:16px;">
+          <div style="font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:#0284c7;margin-bottom:8px;">🌍 Global Traction</div>
+          <p style="font-size:13px;color:#374151;line-height:1.6;">{{STRENGTHS}}</p>
+        </div>
+        <div style="background:#f0fdf4;border:1px solid #bbf7d0;border-radius:10px;padding:16px;">
+          <div style="font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:#16a34a;margin-bottom:8px;">🇯🇵 Japan Opportunity</div>
+          <p style="font-size:13px;color:#374151;line-height:1.6;">{{JAPAN_POTENTIAL}}</p>
+        </div>
+      </div>
+      <div style="background:#fffbeb;border:1px solid #fde68a;border-radius:10px;padding:16px;">
+        <div style="font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:#d97706;margin-bottom:8px;">💡 Key Insight</div>
+        <p style="font-size:13px;color:#374151;line-height:1.6;">{{BUSINESS_SUMMARY}}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header"><span class="section-num">03</span><span class="section-title">First Impression Analysis</span></div>
+    <div class="section-body">
+      <div class="score-item">
+        <div class="score-item-header">
+          <span class="score-item-name">Trust Perception</span>
+          <span style="font-size:14px;font-weight:700;">45/100</span>
+          <span class="score-label label-needs">Needs Improvement</span>
+        </div>
+        <div class="score-gauge-wrap"><div class="gauge-track"><div class="gauge-fill gauge-orange" style="width:45%"></div></div></div>
+        <div class="score-detail">
+          <p class="detail-reason-label">Why this score:</p>
+          <p style="font-size:13px;color:#4b5563;line-height:1.6;margin-bottom:10px;">LP lacks critical trust elements for Japan market: no company profile/history, missing security certifications, no client testimonials or case studies, subdomain URL reduces corporate credibility, and absence of physical address or established contact information beyond generic 'Contact' label</p>
+          <p class="detail-hint-label">💡 Hint:</p>
+          <div style="font-size:13px;color:#374151;background:#f8f9fa;border-left:3px solid var(--gold);padding:10px 14px;border-radius:0 6px 6px 0;line-height:1.6;">Add comprehensive 'Company' section with founding story, team credentials, explicit security measures (data encryption, access controls), and migrate to custom domain with SSL to establish legitimate business presence</div>
+        </div>
+      </div>
+      <div class="score-item">
+        <div class="score-item-header">
+          <span class="score-item-name">Japan Market Fit</span>
+          <span style="font-size:14px;font-weight:700;">55/100</span>
+          <span class="score-label label-needs">Needs Improvement</span>
+        </div>
+        <div class="score-gauge-wrap"><div class="gauge-track"><div class="gauge-fill gauge-yellow" style="width:55%"></div></div></div>
+        <div class="score-detail">
+          <p class="detail-reason-label">Why this score:</p>
+          <p style="font-size:13px;color:#4b5563;line-height:1.6;margin-bottom:10px;">Service offering aligns with Japan's growing AI adoption needs and LINE integration shows market awareness, but lacks Japan-specific positioning, local success stories, language about risk mitigation, and culturally appropriate business relationship building approach</p>
+          <p class="detail-hint-label">💡 Hint:</p>
+          <div style="font-size:13px;color:#374151;background:#f8f9fa;border-left:3px solid var(--gold);padding:10px 14px;border-radius:0 6px 6px 0;line-height:1.6;">Emphasize long-term partnership approach, add 'trial period' or 'pilot program' options, showcase understanding of Japanese business workflows (ringi system, consensus building), and highlight dedicated support structure</div>
+        </div>
+      </div>
+      <div class="score-item">
+        <div class="score-item-header">
+          <span class="score-item-name">CTA Naturalness</span>
+          <span style="font-size:14px;font-weight:700;">60/100</span>
+          <span class="score-label label-moderate">Moderate</span>
+        </div>
+        <div class="score-gauge-wrap"><div class="gauge-track"><div class="gauge-fill gauge-yellow" style="width:60%"></div></div></div>
+        <div class="score-detail">
+          <p class="detail-reason-label">Why this score:</p>
+          <p style="font-size:13px;color:#4b5563;line-height:1.6;margin-bottom:10px;">Current 'Contact' CTA is appropriately neutral but lacks Japanese preference for low-commitment initial touchpoints; missing gradual engagement pathway (resource download → inquiry → consultation → proposal) that respects decision-making process and nemawashi culture</p>
+          <p class="detail-hint-label">💡 Hint:</p>
+          <div style="font-size:13px;color:#374151;background:#f8f9fa;border-left:3px solid var(--gold);padding:10px 14px;border-radius:0 6px 6px 0;line-height:1.6;">Implement tiered CTA strategy: primary soft CTA 'Download Service Overview' (資料ダウンロード), secondary 'Request Free Consultation' (無料相談), emphasize no-obligation nature, add FAQ section to reduce inquiry friction</div>
+        </div>
+      </div>
+      <div class="score-item">
+        <div class="score-item-header">
+          <span class="score-item-name">Service Comprehension</span>
+          <span style="font-size:14px;font-weight:700;">65/100</span>
+          <span class="score-label label-moderate">Moderate</span>
+        </div>
+        <div class="score-gauge-wrap"><div class="gauge-track"><div class="gauge-fill gauge-yellow" style="width:65%"></div></div></div>
+        <div class="score-detail">
+          <p class="detail-reason-label">Why this score:</p>
+          <p style="font-size:13px;color:#4b5563;line-height:1.6;margin-bottom:10px;">AI agent concept is communicated with reasonable clarity through service descriptions and feature lists, but lacks concrete visual examples, demo videos, or step-by-step implementation explanations that Japanese audiences prefer for understanding new technology offerings</p>
+          <p class="detail-hint-label">💡 Hint:</p>
+          <div style="font-size:13px;color:#374151;background:#f8f9fa;border-left:3px solid var(--gold);padding:10px 14px;border-radius:0 6px 6px 0;line-height:1.6;">Add visual workflow diagrams showing before/after automation scenarios, embed short demo video (2-3 minutes), create FAQ section addressing common questions about AI agents, and provide glossary for technical terms with Japanese business context</div>
+        </div>
+      </div>
+      <div class="score-item">
+        <div class="score-item-header">
+          <span class="score-item-name">Ad Approval Risk</span>
+          <span style="font-size:14px;font-weight:700;color:var(--red);">35/100</span>
+          <span class="score-label label-high-risk">High Risk</span>
+        </div>
+        <div class="score-gauge-wrap"><div class="gauge-track"><div class="gauge-fill gauge-red" style="width:35%"></div></div></div>
+        <div class="score-detail">
+          <p class="detail-reason-label">Why this score:</p>
+          <p style="font-size:13px;color:#4b5563;line-height:1.6;margin-bottom:10px;">Generic AI claims without substantiation pose compliance risk for Japan Google/META ads; lack of specific disclaimers about AI limitations, missing clear pricing transparency, and absence of responsible AI usage guidelines could trigger ad rejection under Japan's景品表示法 (Act against Unjustifiable Premiums and Misleading Representations)</p>
+          <p class="detail-hint-label">🚨 Priority Action:</p>
+          <div style="font-size:13px;color:#374151;background:#fff5f5;border-left:3px solid var(--red);padding:10px 14px;border-radius:0 6px 6px 0;line-height:1.6;">Add specific disclaimers about AI agent capabilities and limitations, include transparent pricing indicators or 'starting from' guidance, incorporate 'results may vary' language, and ensure all performance claims are supportable with data or case studies before running paid ads</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header"><span class="section-num">04</span><span class="section-title">Trust Architecture Analysis</span></div>
+    <div class="section-body">
+      <div class="score-item"><div class="score-item-header"><span class="score-item-name">Corporate Transparency</span><span class="score-value">50/100</span><span class="score-label label-needs">Needs Improvement</span></div></div>
+      <div class="score-item"><div class="score-item-header"><span class="score-item-name">Social Proof Quality</span><span class="score-value">55/100</span><span class="score-label label-moderate">Moderate</span></div></div>
+      <div class="score-item"><div class="score-item-header"><span class="score-item-name">Japan Enterprise Fit</span><span class="score-value">60/100</span><span class="score-label label-needs">Needs Improvement</span></div></div>
+    </div>
+  </div>
+
+  <div class="closing">
+    <h3>Thank you for taking the time to read this.</h3>
+    <div style="font-size:16px;color:rgba(255,255,255,0.85);margin-bottom:12px;line-height:1.8;">Your product already has strong potential in Japan. In many cases, success in Japan is not determined by the product itself, but by how trust, communication, and localization are structured for Japanese users.</div>
+    <div style="font-size:16px;color:rgba(255,255,255,0.85);margin-bottom:12px;line-height:1.8;">We hope this report helps clarify both the opportunities and the specific improvement areas for entering the Japanese market more effectively.</div>
+
+    <div class="mark-box">
+      <h4 style="font-size:18px;">🤖 Meet Yunico &amp; KEN — Deployed for your Japan market.</h4>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:20px 0;">
+        <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(201,168,76,0.2);border-radius:10px;padding:18px;">
+          <div style="font-size:15px;font-weight:700;color:var(--gold-light);margin-bottom:10px;">Yunico — Japan Market Consultant</div>
+          <p style="font-size:15px;color:rgba(255,255,255,0.8);line-height:1.8;">Yunico understands not just the mechanics of advertising, but the psychology, cultural context, and emotional landscape of Japanese consumers. From localization strategy to audience behavior to campaign performance analysis — she thinks the way a seasoned Japan market specialist does.</p>
+        </div>
+        <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(201,168,76,0.2);border-radius:10px;padding:18px;">
+          <div style="font-size:15px;font-weight:700;color:var(--gold-light);margin-bottom:10px;">KEN — Japan Ad Compliance Specialist</div>
+          <p style="font-size:15px;color:rgba(255,255,255,0.8);line-height:1.8;">KEN specializes in Japan's ad compliance landscape — one of the most complex in the world. But his focus isn't just "will this get rejected." It's: <em>how do we say this in a way that moves people, stays fully compliant, and actually converts?</em></p>
+        </div>
+      </div>
+      <div class="mark-topics">
+        <span class="mark-topic">Japanese Market Localization</span>
+        <span class="mark-topic">Audience Targeting</span>
+        <span class="mark-topic">Communication Strategy</span>
+        <span class="mark-topic">Ad Compliance</span>
+        <span class="mark-topic">Trust Optimization</span>
+        <span class="mark-topic">Japan-Specific Marketing</span>
+      </div>
+      <p class="mark-note" style="margin-top:16px;line-height:1.8;font-size:15px;">Neither of them is a generic AI. Both have been built on the logic and expertise of real specialists in their fields.<br><br>They're deployed here on a trial basis — ask them what you'd ask a consultant on day one. Questions are capped at <strong style="color:rgba(255,255,255,0.85);">10 per day</strong> during the trial period.</p>
+    </div>
+
+    <!-- Mark Section -->
+    <div style="margin-top:32px;border-radius:16px;overflow:hidden;border:1px solid rgba(201,168,76,0.3);">
+      <img src="https://smiuradtoto-png.github.io/smith-right-reports/Mark.png" alt="Mark — AI Project Consultant" style="width:100%;display:block;">
+      <div style="background:rgba(255,255,255,0.05);padding:28px;">
+        <p style="font-size:15px;color:rgba(255,255,255,0.8);line-height:1.9;margin-bottom:20px;">
+          🇯🇵 <strong style="color:var(--gold-light);">Japan Market Consulting</strong><br><br>
+          Every company entering Japan faces different challenges. I help overseas companies understand the Japanese market, localize their products and messaging, design market entry strategies, and build practical go-to-market plans based on their business goals.<br><br>
+          Whether you're exploring opportunities, preparing for launch, or looking to improve your current approach, consulting is tailored to the needs of each company.<br><br>
+          If you'd like an initial estimate before contacting me, you can use <strong style="color:var(--gold-light);">Mark</strong>, my AI consultation assistant. By answering a few questions (approximately 5–10 minutes), Mark will provide a preliminary estimate of the consulting scope, project budget, and recommended starting point for your company.
+        </p>
+        <a href="https://mark-index.s-miura-dtoto.workers.dev/" target="_blank"
+          style="display:inline-block;background:var(--gold);color:var(--navy);font-weight:700;font-size:15px;padding:14px 32px;border-radius:8px;text-decoration:none;letter-spacing:0.5px;">
+          → Start with Mark
+        </a>
+      </div>
+    </div>
+
+    <div class="signature">
+      <p>With appreciation,</p>
+      <p style="margin-top:6px;font-size:14px;color:rgba(255,255,255,0.85);">Saori Miura — <a href="https://www.linkedin.com/in/sally-f18/" target="_blank">LinkedIn</a></p>
+      <p style="font-size:12px;margin-top:4px;color:rgba(255,255,255,0.4);">Smith Right | Japan Market Intelligence</p>
+    </div>
+  </div>
+
+</div>
+
+<div id="download-section" style="background:#1a2a3a;border-top:1px solid rgba(201,168,76,0.3);padding:40px 24px;text-align:center;">
+  <p style="font-size:13px;color:rgba(255,255,255,0.5);margin-bottom:8px;">⚠️ This report will be automatically removed in 10 days.</p>
+  <h3 style="font-family:'DM Serif Display',serif;font-size:22px;color:var(--gold);margin-bottom:12px;">Save a copy of this report</h3>
+  <p style="font-size:14px;color:rgba(255,255,255,0.65);margin-bottom:24px;line-height:1.7;">Click the button below to download this report as a PDF and keep it permanently.</p>
+  <button onclick="window.print()" style="background:var(--gold);color:var(--navy);font-weight:700;font-size:15px;padding:14px 36px;border-radius:8px;border:none;cursor:pointer;letter-spacing:0.5px;font-family:inherit;">↓ Download as PDF</button>
+  <p style="font-size:11px;color:rgba(255,255,255,0.3);margin-top:12px;">Use your browser's print dialog → Select "Save as PDF"</p>
+</div>
+
+<div class="footer">
+  <p>© Smith Right — Japan Market Diagnostic AI | This report is hypothesis-based. Public and provided information only. Not a guaranteed result.</p>
+</div>
+
+</body>
+</html>
